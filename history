@@ -23,5 +23,31 @@ pip install -r requirements.txt
 python.exe -m pip install --upgrade pip
 
 
+django-admin startproject project01 .
+django-admin startproject project02
+
 python manage.py makemigrations
 python manage.py migrate
+
+
+python manage.py runserver
+
+
+//파워쉘 사용에러부분 해결방법
+https://samsons.tistory.com/16
++ CategoryInfo : 보안 오류: (:) [], PSSecurityException
++ FullyQualifiedErrorId : UnauthorizedAccess
+명령어 다음과 같이 입력
+ExecutionPolicy      <-- 현재상태확인
+Restricted              <-- 모든 스크립트 막은 상태
+Set-ExecutionPolicy Unrestricted
+ExecutionPolicy      <-- 현재상태확인
+Unrestricted           <-- 모든 스크립트 허용 상태.
+
+
+프로젝트 생성을 위해서 아래 그림과 같이 "django-admin startpoject testdjango ."을 입력한다. 
+(위 명령어에서 맨 뒤의 . 은 현재 디렉토리에 폴더를 생성한다는 의미이다. 만약 . 을 입력하지 않으면 testdjango 폴더를 만들고, 그 안에 또 testdjango 폴더를 만들게 된다. 개인적으로 지저분해 보여서 . 추가를 추천한다.) 
+$ django-admin startproject mysite #mysite라는 프로젝트 폴더 생성
+$ django-admin startproject config . #현재폴더에 프로젝트 구성
+
+   
