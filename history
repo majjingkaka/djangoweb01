@@ -55,27 +55,36 @@ $ django-admin startproject config . #현재폴더에 프로젝트 구성
 Model       <->   Model
 View         <->   Template
 Controller  <->    View
-
 서버쪽 데이터베이스를 만드는것은 Model을 만든다 생각하시면 되고
-
 웹페이지 화면을 만든다 하면 Template를 만든다 생각하시면 되고
-
 템플릿에서 서버에 일을 시키는건 View를 만든다 생각하시면 됩니다
 
 
-python manage.py makemigrations polls -> 변화의 기록
-python manage.py migrate -> 직접 sql로 처리함
-python manage.py sqlmigrate polls 변경기록번호 -> 과거 이력 조회
+쿼리문적용
+python manage.py makemigrations polls -> 변화의 기록 (기록입력)
+python manage.py migrate -> 직접 sql로 처리함 (적용)
+python manage.py sqlmigrate polls 변경기록번호 -> 과거 이력 조회기능
 
 
+python manage.py createsuperuser
 
 
+여기서 잠깐,  쉘이란 무엇일까요?
+sw를 공부하다 보면 커널과 쉘 이라는 단어가 나옵니다. 쉘은 또 다른말로 터미널이라고 불리기도 하고요.
+일단 간단히 말하면 쉘은 커널(쉽게말하면 운영체제)과 소통하는 도구라는 개념입니다.
+대표적인 예시로 여러분들 cmd 창이 있지요. cmd만 실행시키면 여러분들은 윈도우를 조작할 수 있습니다.
+또다른 예시로 여러분이 지금 윈도우를 마우스와 화면으로 조작하는것 도 쉘입니다.
+cmd의 경우 명령어로만 운영체제를 조작하기에 Command Line Interface(CLI) 라고 불리고
+윈도우를 바탕화면에서 마우스로 조작하는건 Graphic User Interface(GUI) 라고 불립니다.
+즉. 다음에 배울 장고 쉘 이라는것은, 장고를 cmd같은 창을 통하여 장고를 조작한다는 의미가 됩니다
 
 
-
-
-
-
+{{ 로 시작하고 }} 닫히는 문법은 variable이라고 합니다.
+{% 로 시작하고 %} 로 닫히는 문법은 tag라고 합니다.
+variable은 말그대로 context에서 넘어오는 변수를 접근하는 syntax이고
+tag는 tag내에 파이썬 코드를 실행 시킬 수 있는 syntax입니다.
+고로 단순히 변수를 받아오고 싶으면 {{ }} 이걸 쓰면되고
+파이썬 코드를 실행시키고 싶으시면 {% %} 하시면 되겠죠?
 
 
 
