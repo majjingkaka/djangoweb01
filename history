@@ -51,3 +51,38 @@ $ django-admin startproject mysite #mysite라는 프로젝트 폴더 생성
 $ django-admin startproject config . #현재폴더에 프로젝트 구성
 
    
+
+Model       <->   Model
+View         <->   Template
+Controller  <->    View
+
+서버쪽 데이터베이스를 만드는것은 Model을 만든다 생각하시면 되고
+
+웹페이지 화면을 만든다 하면 Template를 만든다 생각하시면 되고
+
+템플릿에서 서버에 일을 시키는건 View를 만든다 생각하시면 됩니다
+
+
+python manage.py makemigrations polls -> 변화의 기록
+python manage.py migrate -> 직접 sql로 처리함
+python manage.py sqlmigrate polls 변경기록번호 -> 과거 이력 조회
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
