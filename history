@@ -1,0 +1,14 @@
+
+venv\Scripts\activate
+venv\Scripts\deactivate
+
+pip install django
+pip install djangorestframework
+
+https://www.toptal.com/developers/gitignore/
+.gitignore
+venv
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
